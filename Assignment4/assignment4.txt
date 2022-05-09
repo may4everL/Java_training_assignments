@@ -1,0 +1,30 @@
+﻿Your program will take two input parameters: input file and output file java XXX <input file name> <output file name>
+ 
+A sample input file is attached with this e-mail. 
+ 
+ 
+The file contains many lines that look like this.
+ 
+1 + 1 ­ 2
+ 
+Problem Format:
+ 
+<number><space><operation><space><number><spaces><...>
+
+<number> - all are integers
+<operation>  - just + and -
+Note: You don¹t have to write a complex and error-prone parser to read the input file. Assume the file has valid syntax specified above. The goal of this exercise is to test your knowledge of Java Threads.
+ 
+Output:
+ 
+Your output should be as follows
+ 
+<problem> = <answer>
+ 
+Example input file
+1 + 1
+2 + 2 ­ 2
+ 
+Example output file
+1 + 1 = 2
+2 + 2 ­ 2 = 2
