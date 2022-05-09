@@ -51,20 +51,15 @@ class Bridge {
     }
 
     public void crossBridge(Vehicle vehicle) {
-        try
-        {
+        try {
             System.out.printf("%s is WAITING to cross the bridge.\n",vehicle.getName());  //takes next argument and output the string
             sema.acquire();  //Acquires a permit and blocks until permit is released.
             System.out.printf("%s is CROSSING the bridge.\n",vehicle.getName());  //takes next argument and prints to string
             long duration = (long)(Math.random()*10);
             TimeUnit.SECONDS.sleep(duration);
-        }
-        catch(InterruptedException e)
-        {   //prints the stack trace of the Exception to System.err.  Helps diagnose Exception.
+        } catch(InterruptedException e) {   //prints the stack trace of the Exception to System.err.  Helps diagnose Exception.
             e.printStackTrace();
-        }
-        finally
-        {
+        } finally {
             System.out.printf("%s has FINISHED CROSSING the bridge.\n",vehicle.getName());  //takes next argument and prints to string
             sema.release();  //permit is released
         }
@@ -75,8 +70,7 @@ class Vehicle implements Runnable {
     //private variables
     private String name;
     private Bridge bridge;
-    public Vehicle(Bridge bridge)
-    {
+    public Vehicle(Bridge bridge) {
         this.bridge = bridge;  //assigns value of parameter bridge to variable with same name
     }
     //method that is implemented when there is a Runnable interface
